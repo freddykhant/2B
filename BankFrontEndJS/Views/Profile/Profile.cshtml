@@ -1,0 +1,70 @@
+﻿@*
+    For more information on creating views in MVC, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    // Initialization for any required data or view setup.
+}
+
+<div id="ProfileView">
+    <h2>User Profile</h2>
+
+    <div class="profile-info">
+        <strong>Name:</strong>
+        <span id="UserName">John Doe</span> <!-- This should be dynamically populated -->
+    </div>
+
+    <div class="profile-info">
+        <strong>Email:</strong>
+        <span id="UserEmail">johndoe@example.com</span> <!-- This should be dynamically populated -->
+    </div>
+
+    <div class="profile-info">
+        <strong>Phone Number:</strong>
+        <span id="UserPhoneNumber">+1-234-567-8901</span> <!-- This should be dynamically populated -->
+    </div>
+
+    <div class="update-actions">
+        <button type="button" id="UpdateContactInfoButton" onclick="updateContactInfo()">Update Contact Information</button>
+        <button type="button" id="ChangePasswordButton" onclick="changePassword()">Change Password</button>
+    </div>
+
+    <!-- The forms for updating contact information and password can be modal dialogs, separate pages, or sections that show up when the buttons are clicked. -->
+    <!-- Example Update Contact Information Form -->
+    <div id="UpdateContactInfoForm" style="display:none;">
+        <h3>Update Contact Information</h3>
+
+        <div class="form-group">
+            <label for="NewEmail">Email:</label>
+            <input type="email" id="NewEmail" name="NewEmail" placeholder="Enter new email">
+        </div>
+
+        <div class="form-group">
+            <label for="NewPhoneNumber">Phone Number:</label>
+            <input type="tel" id="NewPhoneNumber" name="NewPhoneNumber" placeholder="Enter new phone number">
+        </div>
+
+        <button type="submit" id="SaveContactInfoChanges" onclick="saveContactInfoChanges()">Save Changes</button>
+    </div>
+
+    <!-- Example Change Password Form -->
+    <div id="ChangePasswordForm" style="display:none;">
+        <h3>Change Password</h3>
+
+        <div class="form-group">
+            <label for="CurrentPassword">Current Password:</label>
+            <input type="password" id="CurrentPassword" name="CurrentPassword" placeholder="Enter current password" required>
+        </div>
+
+        <div class="form-group">
+            <label for="NewPassword">New Password:</label>
+            <input type="password" id="NewPassword" name="NewPassword" placeholder="Enter new password" required>
+        </div>
+
+        <div class="form-group">
+            <label for="ConfirmNewPassword">Confirm New Password:</label>
+            <input type="password" id="ConfirmNewPassword" name="ConfirmNewPassword" placeholder="Confirm new password" required>
+        </div>
+
+        <button type="submit" id="SavePasswordChanges" onclick="savePasswordChanges()">Save Changes</button>
+    </div>
+</div>

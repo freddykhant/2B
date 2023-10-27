@@ -1,0 +1,46 @@
+﻿@*
+    For more information on creating views in MVC, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    // Initialization for any required data or view setup.
+}
+
+<div id="TransferMoneyView">
+    <h2>Transfer Money</h2>
+
+    <form id="TransferForm" method="post" action="/YourController/TransferMoney">
+        <div class="form-group">
+            <label for="FromAccount">From Account:</label>
+            <select id="FromAccount" name="FromAccount">
+                <!-- Account numbers are placeholder values; you'll populate these options with real data. -->
+                <option value="123456789">Account 123456789</option>
+                <option value="987654321">Account 987654321</option>
+                <!-- ... other accounts ... -->
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="ToAccount">To Account:</label>
+            <input type="text" id="ToAccount" name="ToAccount" placeholder="Recipient's account number" required>
+        </div>
+
+        <div class="form-group">
+            <label for="Amount">Amount:</label>
+            <input type="number" id="Amount" name="Amount" step="0.01" placeholder="0.00" required>
+        </div>
+
+        <div class="form-group">
+            <label for="TransferDate">Transfer Date:</label>
+            <input type="date" id="TransferDate" name="TransferDate" required>
+        </div>
+
+        <div class="form-group">
+            <label for="Remarks">Remarks (optional):</label>
+            <textarea id="Remarks" name="Remarks" rows="2"></textarea>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" id="SubmitTransfer" onclick="submitTransfer()">Transfer Money</button>
+        </div>
+    </form>
+</div>

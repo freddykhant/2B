@@ -1,0 +1,22 @@
+﻿@*
+    For more information on creating views in MVC, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    // You might want to initialize any necessary variables or data structures here.
+}
+<div id="AccountSummary">
+    <h2>Account Summary</h2>
+
+    <div class="account-info">
+        <label for="AccountNumber">Account Number:</label>
+        <input type="text" id="AccountNumber" name="AccountNum" placeholder="1234-5678-9012-3456" readonly>
+    </div>
+
+    <div class="account-info">
+        <label for="CurrentBalance">Current Balance:</label>
+        <input type="text" id="CurrentBalance" name="Balance" placeholder="$0.00" readonly>
+    </div>
+
+    <!-- Optional: You can have a button here to refresh or load the data -->
+    <button type="button" id="RefreshButton" onclick="loadAccountData()">Refresh Data</button>
+</div>

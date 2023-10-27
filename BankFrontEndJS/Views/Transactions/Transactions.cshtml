@@ -1,0 +1,50 @@
+﻿@*
+    For more information on creating views in MVC, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    // You might want to initialize any necessary variables or data structures here.
+}
+
+<div id="TransactionsView">
+    <h2>Transactions</h2>
+
+    <table class="transactions-table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Type</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            @* You would typically loop through your transactions here, for example:
+            @foreach (var transaction in Model.Transactions)
+            {
+            <tr>
+            <td>@transaction.Date</td>
+            <td>@transaction.Description</td>
+            <td>@transaction.Type</td>
+            <td>@transaction.Amount</td>
+            </tr>
+            }
+            *@
+            <!-- Placeholder data for illustration -->
+            <tr>
+                <td>01/01/2023</td>
+                <td>Purchase at ABC Store</td>
+                <td>Debit</td>
+                <td>$50.00</td>
+            </tr>
+            <tr>
+                <td>01/02/2023</td>
+                <td>Deposit</td>
+                <td>Credit</td>
+                <td>$150.00</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Optional: Button to fetch more transactions or refresh the current list -->
+    <button type="button" id="LoadMoreButton" onclick="loadMoreTransactions()">Load More Transactions</button>
+</div>
